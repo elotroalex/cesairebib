@@ -1,0 +1,80 @@
+# Built with Jekyll 3.2.0
+
+# Setup
+title:               A Bibliography of Aimé Césaire
+tagline:             'by Alex Gil'
+description:         'A comprehensive bibliography of primary and secondary sources of Aimé Césaire.'
+url:                 ''
+baseurl:             '/cesaire-bibliography'
+
+# About/contact
+author:
+  name:              Alex Gil
+  url:               https://twitter.com/elotroalex
+  email:             colibri.alex@gmail.com
+
+# Permalinks
+
+permalink: pretty
+permalink: /:title/
+
+# Set encoding to UTF-8
+encoding: utf-8
+
+# Collections for texts
+# collections:
+#   sample:
+#     output: true
+
+
+# Markdown specs
+markdown: kramdown
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  footnote_backlink: "&#x21a9;&#xfe0e;"
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+
+# Custom vars
+version:             0.0.1
+
+# Exclusions from the final site
+exclude: [optional, vendor, 'README', 'RAKEFILE', 'Gemfile.lock', 'Gemfile']
+
+
+# Gems
+gems: ['jekyll/scholar']
+
+# Scholar
+scholar:
+  style: modern-language-association
+  locale: en
+
+  sort_by: author
+  order: ascending
+
+  group_by: none
+  group_order: none
+
+  source: ./_bibliography
+  bibliography: references.bib
+  bibliography_template: "{{reference}}"
+  relative: "/ed/bibliography.html"
+
+  replace_strings: true
+  join_strings:    true
+
+  use_raw_bibtex_entry: false
+
+  details_dir:    bibliography
+  details_layout: bibtex.html
+  details_link:   Details
+
+  query: "@*"
+
+
+

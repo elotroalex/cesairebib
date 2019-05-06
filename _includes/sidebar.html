@@ -1,0 +1,38 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>{{ site.description }}</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item{% if page.url == site.baseurl %} active{% endif %}" href="{{ site.baseurl }}/">Home</a>
+  <a class="sidebar-nav-item" href="{{site.baseurl}}/credits/">Credits</a>
+
+
+    <!-- The code below is used for manually entered links  -->
+
+
+<!--     <a class="sidebar-nav-item" href="https://via.hypothes.is/{{ site.url }}{{ site.baseurl }}{{page.url}}/">Annotate me</a> -->
+
+    <a class="sidebar-nav-item" href="https://github.com/elotroalex/project-x" target="_blank">GitHub repository</a>
+    <a class="sidebar-nav-item" href="https://via.hypothes.is/record.elotroalex.com{{page.url}}" target="_blank">Annotate me</a>
+    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
+  </nav>
+
+  <div class="sidebar-item" style="font-size: .6rem">
+    <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+  <a rel="license"
+     href="http://creativecommons.org/publicdomain/zero/1.0/">
+    <img src="https://licensebuttons.net/p/zero/1.0/80x15.png" style="border-style: none;" alt="CC0" />
+  </a>
+This work was begun in 2017 in <span property="vcard:Country" datatype="dct:ISO3166" content="US" about="http://record.elotroalex.com/">The States of America</span> during a time of misplaced walls. To the extent possible under law, present and future,
+  <a rel="dct:publisher"
+     href="http://www.elotroalex.com/" target="_blank">Alex Gil</a> opens his words to the public to do as it will. For ambiguities, please consult <a href="{{ site.baseurl }}/licenses">Licenses</a>.
+</p>
+    <p>Site built using <a href="http://elotroalex.github.io/ed/">Ed</a>.</p>
+  </div>
+</div>
